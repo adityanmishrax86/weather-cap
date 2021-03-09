@@ -36,8 +36,9 @@ function App() {
           }
 
         })
-      } else {
-        alert("Geolocation is not supported")
+      }
+      else {
+        // console.log("Geolocation is not supported")
       }
 
       // console.log(data.data)
