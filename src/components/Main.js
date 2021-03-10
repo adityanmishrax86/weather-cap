@@ -1,21 +1,4 @@
-import React, { useState } from 'react'
-import axios from 'axios';
-
 const Main = ({ location, current }) => {
-
-    const [searchlocation, setLocation] = useState("")
-    const BASE_SEARCH_URL = `http://api.weatherapi.com/v1/search.json?`
-
-
-    function onHandleChange(e) {
-        setLocation(e.target.value);
-    }
-
-    async function handleSubmit(e) {
-        e.preventDefault();
-        const data = await axios.get(`${BASE_SEARCH_URL}key=${process.env.REACT_APP_WEATHER_AUTH_KEY}&q=${searchlocation}`)
-        console.log(data.data)
-    }
 
     return (
         <div className="bg-weather sm:bg-fixed" style={{ height: "100%" }}>
